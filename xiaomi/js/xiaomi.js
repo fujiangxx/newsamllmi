@@ -210,84 +210,9 @@ $(function(){
 	//
 	// 小米明星单品
 	// 
-//	let shanpinjj3=document.getElementsByClassName("shanpinjj3")[0];
-//  let jiantou1=document.getElementsByClassName("jiantou1")[0];
-//  let jiantou11=jiantou1.getElementsByClassName("jiantou11")[0];
-//  let jiantou12=jiantou1.getElementsByClassName("jiantou12")[0];
-//  let moren1=document.getElementById("moren1");
-//  // let shanpinjj3=shanpinjj3.getElementsByClassName("shanpinjj3")[0];
-//  jiantou11.onclick=function(){
-//  	shanpinjj3.style.marginLeft='0px';
-//  	// jiantou11.classList.add("moren1");
-//   //    jiantou12.classList.remove("moren1");
-//  	// jiantou11.style.color="red";
-//  }
-//  jiantou12.onclick=function(){
-//  	shanpinjj3.style.marginLeft='-1226px';
-//  	// jiantou12.classList.add("moren1");
-//  	// jiantou11.classList.remove("moren1");
-//  	// jiantou12.style.color="red";
-//  }
-//  // let flag=true;
-//  let t2=setInterval(fn2,3000);
-//  let flag=true;
-//  let nume1=0;
-//  function fn2(){
-//  if(flag){
-//     
-//     if(nume1==1){
-//    	flag=false;
-//  
-//    	return;
-//    }
-//    nume1++;
-//    // console.log(flag);
-//    // console.log(nume)
-//   	
-//  }else{
-//
-//   if(nume1==0){
-//    	flag=true; 
-//
-//    	return;
-//
-//    }
-//    nume1--;	
-//  }
-//  	
-//   shanpinjj3.style.marginLeft=`${-1226*nume1}px`;
-//   
-// }
- //购物车效果
-   
-// let gouwuche=document.getElementsByClassName("gouwuche")[0];
-// let gouwuchetan=gouwuche.getElementsByClassName("gouwuchetan")[0];
-// gouwuche.onmouseover=function(){
-// 	 gouwuchetan.style.display="block";
-// }
-// gouwuche.onmouseout=function(){
-// 	 gouwuchetan.style.display="none";
-// }
-   //navi的弹出
-   //
-// let navitanul=document.getElementsByClassName("navitanul");
-// let navileftli=document.querySelectorAll(".navileftli");
-// // console.log(navlefttan)
-// let navlefttan=document.getElementsByClassName("navlefttan");
-// for(let i=0;i<navileftli.length-2;i++){
-// 	   navileftli[i].onmouseenter=function(){
-//        navlefttan[i].style.height="289px";
-//        navlefttan[i].style.borderTop="1px solid #E0E0E0";
-//        navlefttan[i].style.boxShadow=" 0 1px 5px 1px #d8d8d8"; 
-//    }
-//      navileftli[i].onmouseleave=function(){
-//       navlefttan[i].style.height=0;
-//       navlefttan[i].style.borderTop="0px solid #E0E0E0";
-//       navlefttan[i].style.boxShadow=" none"; 
-//   }
-// }
 
-    {
+
+ //内容
         let list=$(".tltletotal1");
 
         list.each(function(){
@@ -295,9 +220,7 @@ $(function(){
             let prev=$(this).children(".lefttt").children(" .lefticon");
             let next=$(this).children(".righttt").children(" .icon-goleft");
             let items=inner.children(".titlenierong");
-            console.log(items);
             let pagers=$(this).children(".titlelunbo").children(".titlelunbof").children("li");
-            console.log(pagers);
             let max=items.length;
             let n=0;
             next.click(function () {
@@ -328,7 +251,6 @@ $(function(){
             }
 
         })
-    }
   
    // let titlelunbof=document.querySelector(".titlelunbof");
    //  // console.log(titlelunbof);
@@ -385,16 +307,20 @@ $(function(){
      
  //jquery     
    //侧边栏
-   $(".bannerlef>li").each(function(index,obj){
-		$(this).hover(function(){
-			$(".xianshi").eq(index).css({display:"block"});
-			$(".xianshi").eq(index).parent().siblings().children(".xianshi").css({display:"none"})
-		},function(){
-			$(".xianshi").css({display:"none"});  
-		})
-		
-	})
-   
+
+    {
+        $(".bannerlef>li").each(function(index,obj){
+            $(this).hover(function(){
+                $(".xianshi").eq(index).css({display:"block"});
+                $(".xianshi").eq(index).parent().siblings().children(".xianshi").css({display:"none"})
+            },function(){
+                $(".xianshi").css({display:"none"});
+            })
+
+        })
+    }
+
+   //$(".xianshi").eq(index).parent().siblings().children(".xianshi").css("display","none")
    //轮播点
 //    $(".luobo li").each(function(index,obj){
 // 		$(this).on("click",function(){
@@ -517,14 +443,13 @@ $(function(){
     }
 
     //家电
-    {
+
         let btns = $(".jiadianm2 ul li a");
         btns.hover(function() {
             let index = $(this).parent().index();
             $(this).addClass("active").parent().siblings().children().removeClass("active");
             $(this).parent().parent().parent().parent().next().children(".jiadianmore").eq(index).addClass("active").siblings().removeClass("active");
         })
-    }
     
 
 })

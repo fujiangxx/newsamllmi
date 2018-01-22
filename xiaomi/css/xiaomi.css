@@ -545,7 +545,6 @@ aside ul{
 }
 
 aside ul li .xianshi{
-	/* display: block; */
 	width: 993px;
 	height: 574px;
 	background: white;
@@ -555,6 +554,7 @@ aside ul li .xianshi{
 	border-top: 1px solid #e0e0e0;
 	box-shadow: 1px 3px 10px 1px #d6d3d3;
 	display: none;
+	z-index:9999;
 }
 aside ul li .minixianshi{
 	width: 246px;
@@ -668,7 +668,7 @@ aside ul li .minixianshi{
 	width:233px;
 	height:540px;
 	margin-top:20px;
-	z-index: 3000;
+	z-index: 9000;
 }
 .bannerlef11{
 	width: 100%;
@@ -677,7 +677,7 @@ aside ul li .minixianshi{
 	display: block;
 	/* position: relative; */
 }
-.bannerlef11:hover{
+.bannerlef1:hover{
 	background: #ff6700;
 }
 .word1{
